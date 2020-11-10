@@ -21,6 +21,10 @@ Bot commands:
 - userinfo command
 - serverinfo command
 - ping command
+- avatar command
+- set avatar command for bot
+- set username command for bot
+- set presence command for bot
 
 
 
