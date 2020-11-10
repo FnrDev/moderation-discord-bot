@@ -1,12 +1,21 @@
 # discord-bot
 
-First create named "config.json"
+First create file named "config.json"
 
 - config.json
 
 {
-    "token": "",
-    "prefix": ""
+    "token": "Your discord bot token",
+    "prefix": "Your discord bot prefix"
 }
 
-and put your discord bot token and bot prefix
+
+
+---------------------------------------------------------------
+
+في البدايه سو ملف اسمه "config.json"
+
+{
+    "token": "توكن البوت",
+    "prefix": "بريفكس البوت"
+}
