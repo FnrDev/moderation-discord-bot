@@ -1,6 +1,9 @@
 # discord-bot
 
-First create file named "config.json"
+- get started
+
+1- First create file named "config.json"
+2- npm install
 
 - config.json
 
@@ -13,7 +16,10 @@ First create file named "config.json"
 
 ---------------------------------------------------------------
 
+
 في البدايه سو ملف اسمه "config.json"
+
+بعدها حمل بكجات عن طريق امر "npm install"
 
 {
     "token": "توكن البوت",
