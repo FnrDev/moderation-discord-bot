@@ -11,10 +11,14 @@ module.exports = {
 		}
 		const role = message.guild.roles.cache.find(role => role.name == '@everyone')
 		const mentionChannel = message.mentions.channels.first() || message.channel
+		const reason = args.slice(1).join(" ") || ''
 
 		mentionChannel.updateOverwrite(role, {
 			'SEND_MESSAGES': false,
 		})
-		.then(message.channel.send(`Successfully locked ${mentionChannel}`))
+		.then(message.channel.send(`Successfully locked ${mentionChannel}\nwith reason **${reason}**`))
+		.catch(err => {
+			return message.channel.send('There was an error!')
+		})
 	}
 }
