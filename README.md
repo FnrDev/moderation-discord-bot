@@ -12,6 +12,16 @@
     "prefix": "Your discord bot prefix"
 }
 
+Bot commands:
+- ban command
+- kick command
+- botinfo command
+- say command
+- change nickname command
+- userinfo command
+- serverinfo command
+- ping command
+
 
 
 ---------------------------------------------------------------
