@@ -16,5 +16,8 @@ module.exports = {
         await message.channel.bulkDelete(deleteAmont, true)
         await message.channel.send(`Successfully deleted ${deleteAmont} messages`)
         .then(m => m.delete({ timeout: 2000}))
+        .catch(err => {
+            return message.channel.send('There was an error!')
+        })
     }
 }
