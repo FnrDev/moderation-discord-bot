@@ -13,13 +13,13 @@ module.exports = {
         if (!args[1]) {
             return message.channel.send('Please enter role name')
         }
-        const RoleName = message.guild.roles.cache.find(role => (role.name == args[1])) || (role.id == args[1])
+        const RoleName = message.guild.roles.cache.find(r => (r.name === args[1].toLocaleString()) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
         const UserAlreadyHaveRole = mentionMember._roles.includes(RoleName.id);
         if (UserAlreadyHaveRole) {
             return message.channel.send('User already have this role!')
         }
         mentionMember.roles.add(RoleName)
-        .then(message.channel.send(`Successfully added ${RoleName} to ${mentionMember}`))
+        .then(message.channel.send(`Successfully added **${RoleName.name}** role to ${mentionMember}`))
         .catch(err => {
             return message.channel.send('There was an error')
         })
