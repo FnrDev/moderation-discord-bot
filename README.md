@@ -6,11 +6,12 @@
 2- npm install
 
 - config.json
-
+```
 {
     "token": "Your discord bot token",
     "prefix": "Your discord bot prefix"
 }
+```
 
 Bot commands:
 - ban command
