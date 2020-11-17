@@ -26,6 +26,7 @@ Bot commands:
 - set avatar command for bot
 - set username command for bot
 - set presence command for bot
+- restart command
 - add role command
 - clear command
 
