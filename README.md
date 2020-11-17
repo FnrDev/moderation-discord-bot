@@ -1,4 +1,4 @@
-# discord bot made by Fnr#9999
+# Discord bot made by Fnr#9999
 
 - get started
 
