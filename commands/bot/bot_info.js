@@ -25,6 +25,11 @@ module.exports = {
                 name: "Total Channels: ",
                 value: `${client.channels.cache.size} Channels`,
                 inline: true
+            },
+            {
+                name: "You can get me for free at: ",
+                value: `[Link](https://github.com/FnrDev/moderation-discord-bot)`,
+                inline: true
             }
         )
         await message.channel.send(embed)
