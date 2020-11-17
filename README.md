@@ -38,7 +38,9 @@ Bot commands:
 
 بعدها حمل بكجات عن طريق امر "npm install"
 
+```
 {
-    "token": "توكن البوت",
-    "prefix": "بريفكس البوت"
+    "token": "Your discord bot token",
+    "prefix": "Your discord bot prefix"
 }
+```
