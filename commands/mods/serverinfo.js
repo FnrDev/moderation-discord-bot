@@ -23,7 +23,7 @@ module.exports = {
                 inline: true
             },
             {
-                name: `Members (${message.guild.membeCount})`,
+                name: `Members (${message.guild.memberCount})`,
                 value: `**${message.guild.members.cache.filter(m => m.user.presence.status == 'online').size}** Online`,
                 inline: true
             },
