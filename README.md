@@ -30,6 +30,8 @@ Bot commands:
 - add role command
 - clear command
 
+- **And alot more..**
+
 
 
 ---------------------------------------------------------------
