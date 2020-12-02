@@ -38,6 +38,16 @@ module.exports = {
                 inline: true
             },
             {
+                name: "Total Boost: ",
+                value: `${message.guild.premiumSubscriptionCount} Boost`,
+                inline: true
+            },
+            {
+                name: "Boost Level: ",
+                value: message.guild.premiumTier,
+                inline: true
+            },
+            {
                 name: "Emojis: ",
                 value: message.guild.emojis.cache.size >= 1 ? `There are ${message.guild.emojis.cache.size} emojis!` : 'There are no emojis :(',
                 inline: true
