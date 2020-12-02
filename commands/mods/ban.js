@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+const {MessageEmbed} = require('discord.js')
 
 module.exports = {
     name: "ban",
@@ -10,6 +10,10 @@ module.exports = {
         if (mentionMember.id == client.user.id) return message.channel.send('You cant ban me!')
         try {
             let reason = args.slice(1).join(" ") || 'There are no reason'
+            const embed = new MessageEmbed()
+            .setTitle('You have been banned')
+            .setDescription(`You have been banned in **${message.guild.name}** for **${reason}** by ${message.author.tag}`)
+            .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true}))
             await mentionMember.ban({ reason: reason})
             message.channel.send(`Successfully ban ${mentionMember} with reason ${reason}`)
         } catch(e) {
