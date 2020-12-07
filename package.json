@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.0",
+    "canvacord": "^5.0.8",
     "discord.js": "^12.4.1",
     "fs": "0.0.1-security",
     "ms": "^2.1.2",
