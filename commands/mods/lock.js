@@ -11,7 +11,7 @@ module.exports = {
 		}
 		const role = message.guild.roles.cache.find(role => role.name == '@everyone')
 		const mentionChannel = message.mentions.channels.first() || message.channel
-		const reason = args.slice(1).join(" ") || ''
+		const reason = args.slice(1).join(" ") || 'With no reason'
 
 		mentionChannel.updateOverwrite(role, {
 			'SEND_MESSAGES': false,
