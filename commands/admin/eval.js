@@ -1,5 +1,5 @@
 // You can put more than 2 ids 
-const ownerID = ['596227913209217024', 'OwnerID2']
+const ownerID = ['ownerid1', 'OwnerID2']
 
 module.exports = {
     name: "eval",
