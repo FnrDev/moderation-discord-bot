@@ -14,6 +14,7 @@ module.exports = {
             .setTitle('You have been banned')
             .setDescription(`You have been banned in **${message.guild.name}** for **${reason}** by ${message.author.tag}`)
             .setFooter(message.author.tag, message.author.displayAvatarURL({ dynamic: true}))
+            mentionMember.send(embed)
             await mentionMember.ban({ reason: reason})
             message.channel.send(`Successfully ban ${mentionMember} with reason ${reason}`)
         } catch(e) {
