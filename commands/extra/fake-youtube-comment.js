@@ -4,7 +4,6 @@ const axios = require('axios')
 module.exports = {
     name: "yt",
     run: async(client, message, args) => {
-        const mentionMember = message.mentions.members.first() || message.author
         let comment = args.join(" ")
         if (!comment) {
             return message.channel.send('You need to input your comment')
