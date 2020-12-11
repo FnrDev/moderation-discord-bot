@@ -9,7 +9,7 @@ module.exports = {
         if (!comment) {
             return message.channel.send('You need to input your comment')
         }
-        const url = `https://some-random-api.ml/canvas/youtube-comment?comment=${args.join(" ")}&comment=${comment}&username=${message.author.username}&avatar=${message.author.displayAvatarURL({ format: 'png'})}`
+        const url = `https://some-random-api.ml/canvas/youtube-comment?comment=${comment}&username=${message.author.username}&avatar=${message.author.displayAvatarURL({ format: 'png'})}`
 
         let response, data
         try {
