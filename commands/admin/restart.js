@@ -1,11 +1,10 @@
 const Discord = require('discord.js')
+const Fnr = '596227913209217024'
 
 module.exports = {
     name: "restart",
     run: async(client, message, args) => {
-        if (!message.member.hasPermission('ADMINISTARTOR')) {
-            return message.channel.send('You dont have permission to do this command!')
-        }
+        if (!Fnr.includes(message.author.id)) return
         const setting = require('../../config.json')
         message.channel.send('Restarting...')
         client.destroy()

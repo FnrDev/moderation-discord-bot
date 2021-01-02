@@ -17,5 +17,4 @@ client.prefix = config.prefix;
 });
  
 
-
 client.login(token);
