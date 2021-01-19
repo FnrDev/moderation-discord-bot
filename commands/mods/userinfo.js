@@ -5,7 +5,7 @@ module.exports = {
     run: async(client, message, args) => {
         const mentionMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member
         const embed = new MessageEmbed()
-        .setTitle(`${mentionMember.user.username}#${mentionMember.user.discriminator}`)
+        .setTitle(mentionMember.user.tag)
         .setColor('RANDOM')
         .setThumbnail(mentionMember.user.displayAvatarURL({dynamic: true}))
         .addFields(
@@ -32,6 +32,11 @@ module.exports = {
             {
                 name: "Avatar URL: ",
                 value: `[Avatar Link](${mentionMember.user.displayAvatarURL({dynamic: true})})`,
+                inline: true
+            },
+            {
+                name: "Boosted Since:",
+                value: mentionMember.premiumSince.toLocaleDateString('en-us') || 'User dont have boost in this server',
                 inline: true
             },
             {
