@@ -5,23 +5,23 @@ module.exports = {
     run: async(client, message, args) => {
         const mentionMember = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member
         const embed = new MessageEmbed()
-        .setTitle(mentionMember.user.tag)
+        .setAuthor(mentionMember.user.tag, mentionMember.user.displayAvatarURL({ dynamic: true }))
         .setColor('RANDOM')
         .setThumbnail(mentionMember.user.displayAvatarURL({dynamic: true}))
         .addFields(
             {
                 name: "Account Created At: ",
-                value: mentionMember.user.createdAt.toLocaleDateString('en-us'),
+                value: mentionMember.user.createdAt.toLocaleString(),
                 inline: true
             },
             {
                 name: "Joined At: ",
-                value: mentionMember.guild.joinedAt.toLocaleDateString('en-us'),
+                value: mentionMember.guild.joinedAt.toLocaleString(),
                 inline: true
             },
             {
                 name: "User ID: ",
-                value: mentionMember.user.id,
+                value: mentionMember.id,
                 inline: true
             },
             {
@@ -36,7 +36,7 @@ module.exports = {
             },
             {
                 name: "Boosted Since:",
-                value: mentionMember.premiumSince.toLocaleDateString('en-us') || 'User dont have boost in this server',
+                value: mentionMember.premiumSince || 'User dont have boost in this server',
                 inline: true
             },
             {
