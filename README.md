@@ -6,7 +6,7 @@
 2- npm install
 
 - config.json
-```
+```js
 {
     "token": "Your discord bot token",
     "prefix": "Your discord bot prefix"
@@ -41,7 +41,7 @@ Bot commands:
 
 بعدها حمل بكجات عن طريق امر "npm install"
 
-```
+```js
 {
     "token": "Your discord bot token",
     "prefix": "Your discord bot prefix"
