@@ -6,7 +6,6 @@ module.exports = {
     run: async(client, message, args) => {
         const mentionMember = message.mentions.members.first()
         const url = `https://some-random-api.ml/canvas/wasted?avatar=${mentionMember.user.displayAvatarURL({ format: 'png'})}`
-
         let response, data
         try {
             response = await axios.get(url)
