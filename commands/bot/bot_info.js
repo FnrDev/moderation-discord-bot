@@ -9,7 +9,7 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle('Bot info')
         .setColor('RANDOM')
-        .setFooter('By Fnr#9999 | Github: FnrDev')
+        .setFooter('By Fnr#0017 | Github: FnrDev')
         .setThumbnail(client.user.displayAvatarURL())
         .addFields(
             {

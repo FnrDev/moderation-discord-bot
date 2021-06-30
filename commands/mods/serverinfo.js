@@ -6,6 +6,8 @@ module.exports = {
         const embed = new MessageEmbed()
         .setAuthor(message.guild.name, message.guild.iconURL())
         .setColor('RANDOM')
+        .setFooter(`Requested by ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }))
+        .setThumbnail(message.guild.iconURL({ dynamic: true }))
         .addFields(
             {
                 name: 'Server ID: ',
@@ -14,8 +16,12 @@ module.exports = {
             },
             {
                 name: "Created At: ",
-                value: message.guild.createdAt.toLocaleDateString("en-us"),
+                value: message.guild.createdAt.toLocaleString(),
                 inline: true
+            },
+            {
+                name: "Channels:",
+                value: `**${message.guild.channels.cache.filter(c => c.type == 'text').size}** text | **${message.guild.channels.cache.filter(c => c.type == 'voice').size}** voice | **${message.guild.channels.cache.filter(c => c.type == 'category').size}** category`
             },
             {
                 name: "Owned By: ",
