@@ -1,6 +1,6 @@
 const Timeout = new Set();
-const {MessageEmbed, WebhookClient} = require('discord.js')
-const {prefix} = require('../../config.json')
+const { MessageEmbed, WebhookClient } = require('discord.js')
+const { prefix } = require('../../config.json')
 const ms = require('ms')
 
 module.exports = async (bot , message) => {
@@ -14,8 +14,8 @@ module.exports = async (bot , message) => {
     let command = bot.commands.get(cmd);
     if (!command) command = bot.commands.get(bot.aliases.get(cmd));
     if (command) {
-        if(command.timeout){
-            if(Timeout.has(`${message.author.id}${command.name}`)) {
+        if (command.timeout) {
+            if (Timeout.has(`${message.author.id}${command.name}`)) {
                 const embed = new MessageEmbed()
                 .setTitle('You are in timeout!')
                 .setDescription(`:x: You need to wait ${ms(command.timeout)} to use command again`)
