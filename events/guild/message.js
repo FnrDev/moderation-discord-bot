@@ -27,7 +27,7 @@ module.exports = async (bot , message) => {
                 setTimeout(() => {
                     Timeout.delete(`${message.author.id}${command.name}`)
                 }, command.timeout);
-                const webhook = new WebhookClient('860679610008993803', 'EzoaWTGQdxGWgnCYvpbUzLZCuGuM1aWKtMaAM8J3SY1WnZsRAiBWt5BrPht7PImOsf05')
+                const webhook = new WebhookClient('id', 'token')
                 const embed = new MessageEmbed()
                 .setAuthor(message.author.tag, message.author.displayAvatarURL({ dynamic: true }))
                 .setThumbnail(message.guild.iconURL({ dynamic: true }))
