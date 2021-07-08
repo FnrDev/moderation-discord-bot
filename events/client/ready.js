@@ -1,7 +1,7 @@
 module.exports = client => {   
     let botStatus = [
       'instagram: @bcoq',
-      'Discord: Fnr#9999',
+      'Discord: Fnr#0017',
       'Github: FnrDev'
     ]
     setInterval(function() {
@@ -9,4 +9,4 @@ module.exports = client => {
       client.user.setActivity(status, {type: 'WATCHING'})
     }, 20000)  
       console.log(`Logged in as ${client.user.username}`);  
-    };
+};
