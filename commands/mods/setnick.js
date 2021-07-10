@@ -12,11 +12,16 @@ module.exports = {
         if (!mention) return message.channel.send('**⛔ You need to mention a user!**')
         try {
         const nickname = args.slice(1).join(" ")
-        if (!nickname) mention.setNickname('')
-        if (nickname) await mention.setNickname(nickname)
-        return message.channel.send(`**Successfully changed nickname**`)
+        if (!nickname) {
+            mention.setNickname('')
+            return message.channel.send(`✅ ${mention} nickname has been reset`)
+        }
+        if (nickname) {
+            await mention.setNickname(nickname)
+            message.channel.send(`✅ ${mention} nickname has been set to **${nickname}**`)
+        }
         } catch (e) {
-            return message.channel.send('i cant change nickname for this member')
+            return message.channel.send(':x: i cant change nickname for this member')
         }
     }
 }
